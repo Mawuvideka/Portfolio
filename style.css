@@ -1,4 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap');
 #nav-logo{
-    width: 90px;
-    height: 90px;
+    width: 100px;
+    height: 100px;
 }
+
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8vh;
+    background-color: #065956;
+    font-size: 20px;
+    font-family: 'Cinzel', serif;
+}
+
+h4{
+    color: white;
+    letter-spacing: 5px;
+    font-size: 20px;
+}
+
+.nav-links{display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 45%;
+}
+
+.nav-links li{
+    list-style: none;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+}
+
+.burger div{width: 25px;
+    height: 5px;
+    background-color: #ffffff;
+margin: 5px;
+}
+
+.burger div{
+    display: none;
+    cursor: pointer;
+}
+
+/* this code is for mobile view */
+
+@media screen and (max-width:768px){
+    body{
+        /* display: none; */
+        overflow-x: hidden;
+    }
+
+    .nav-links{
+        position: absolute;
+        right: 0px;
+        height: 92vh;
+        top: 8vh;
+        background-color:#065956;
+        font-family: Georgia;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+    }
+
+    .nav-links li{
+        opacity: 0;
+    }
+
+    .burger div{
+        display: block;
+    }
+
+
+    
+} 
