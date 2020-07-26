@@ -1,29 +1,44 @@
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap');
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+
+}
+/* @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap'); */
 #nav-logo{
-    width: 100px;
+    /* for Mawuli Denteh */
+    /* width: 100px;
+    height: 100px; */
+    /* for Logic Logo */
+    width: 210px;
     height: 100px;
 }
 
 nav{
     display: flex;
-    justify-content: space-around;
-    align-items: center;
+    justify-content: space-around;             /* give it space */
+    align-items: center; 
     min-height: 8vh;
     background-color: #065956;
     font-size: 20px;
-    font-family: 'Cinzel', serif;
+    font-family: Georgia;
 }
 
 h4{
     color: white;
-    letter-spacing: 5px;
-    font-size: 20px;
+    letter-spacing: 6px;
+    font-size: 24px;
+    word-spacing: 30;
+    text-decoration: solid;
+    font-family: Georgia, serif;
+    text-transform: uppercase;
 }
 
 .nav-links{display: flex;
     justify-content: space-around;
     align-items: center;
     width: 45%;
+    letter-spacing: 3px;
 }
 
 .nav-links li{
@@ -32,7 +47,18 @@ h4{
 
 .nav-links a {
     color: white;
-    text-decoration: none;
+    text-decoration: solid;
+    font-size: 24;
+    display: block;
+    border-bottom: 3px solid transparent;
+}
+
+.nav-links a:hover{
+    border-bottom: 2px solid #0082BE;
+}
+
+.nav-links a.active{
+    border-bottom: 2px solid #0082BE;
 }
 
 .burger div{width: 25px;
@@ -46,6 +72,28 @@ margin: 5px;
     cursor: pointer;
 }
 
+body{
+background-color: rgb(237, 245, 245);
+font-family: Arial;
+
+}
+
+h2{
+    margin-left: 40px;
+    font-weight: 600;
+}
+
+p{
+    margin-left: 40px;
+    line-break: loose;
+}
+
+ol{
+    margin-left: 50px;
+    list-style: disc;
+    line-break: loose;
+}
+
 /* this code is for mobile view */
 
 @media screen and (max-width:768px){
@@ -54,13 +102,14 @@ margin: 5px;
         overflow-x: hidden;
     }
 
+    /* what should happen to the nav-links when we get to mobile resolution */
     .nav-links{
         position: absolute;
         right: 0px;
         height: 92vh;
         top: 8vh;
         background-color:#065956;
-        font-family: Georgia;
+        /* font-family: Georgia; */
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -69,6 +118,7 @@ margin: 5px;
         transition: transform 0.5s ease-in;
     }
 
+    /* nav bar links will not show; clicking burger menu makes it fade in */
     .nav-links li{
         opacity: 0;
     }
@@ -76,7 +126,46 @@ margin: 5px;
     .burger div{
         display: block;
     }
-
-
-    
 } 
+
+/* add image as logo */
+/* #nav-logo{
+    float: left;
+    width: 11.1px;
+    height: 15px;
+    margin-right: 10px;
+} */
+
+.nav-active{
+    transform: translateX(0%);
+}
+
+
+/* Now, we animate the list into the hb menu
+by building an animation */
+
+@keyframes navLinkFade{
+    from{
+        opacity: 0;
+        transform: translateX(50px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+/* this is the last code to add. After all is said and done,... */
+
+.toggle .line1{
+    transform: rotate(-45deg); translate: -5px, 6px);
+}
+
+.toggle .line2{
+    opacity: 0;
+}
+
+.toggle .line3{
+    transform: rotate(45deg); translate: (-5px, 6px);
+}
