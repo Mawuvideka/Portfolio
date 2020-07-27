@@ -1,6 +1,6 @@
 *{
     margin: 0px;
-    padding: 0px;
+    padding: 3px;
     box-sizing: border-box;
 
 }
@@ -14,6 +14,26 @@
     height: 100px;
 }
 
+div.logo{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.logo-text a{
+    color: white;
+    text-decoration: solid;
+}
+
+.logo-text a:hover{
+    border-bottom: 2px solid #0082BE ;
+
+}
+
+/* .logo-text a:active{
+    border-bottom: 2px solid red;
+} */
+
 nav{
     display: flex;
     justify-content: space-around;             /* give it space */
@@ -26,19 +46,23 @@ nav{
 
 h4{
     color: white;
-    letter-spacing: 6px;
+    letter-spacing: 4px;
     font-size: 24px;
     word-spacing: 30;
     text-decoration: solid;
     font-family: Georgia, serif;
     text-transform: uppercase;
+    margin-left: 0px;
 }
+
 
 .nav-links{display: flex;
     justify-content: space-around;
     align-items: center;
-    width: 45%;
+    width: 70%;
     letter-spacing: 3px;
+    padding-left: 400px;
+    font-size: 17px;
 }
 
 .nav-links li{
@@ -48,7 +72,6 @@ h4{
 .nav-links a {
     color: white;
     text-decoration: solid;
-    font-size: 24;
     display: block;
     border-bottom: 3px solid transparent;
 }
@@ -79,12 +102,12 @@ font-family: Arial;
 }
 
 h2{
-    margin-left: 40px;
+    margin-left: 20px;
     font-weight: 600;
 }
 
 p{
-    margin-left: 40px;
+    margin-left: 20px;
     line-break: loose;
 }
 
@@ -128,38 +151,20 @@ ol{
     }
 } 
 
-/* add image as logo */
-/* #nav-logo{
-    float: left;
-    width: 11.1px;
-    height: 15px;
-    margin-right: 10px;
-} */
-
-.nav-active{
-    transform: translateX(0%);
-}
-
-
-/* Now, we animate the list into the hb menu
-by building an animation */
-
 @keyframes navLinkFade{
     from{
         opacity: 0;
         transform: translateX(50px);
     }
 
-    to{
+      to{
         opacity: 1;
         transform: translateX(0px);
     }
 }
 
-/* this is the last code to add. After all is said and done,... */
-
 .toggle .line1{
-    transform: rotate(-45deg); translate: -5px, 6px);
+    transform: rotate(-45deg) translate(-5px, 6px);
 }
 
 .toggle .line2{
@@ -167,5 +172,5 @@ by building an animation */
 }
 
 .toggle .line3{
-    transform: rotate(45deg); translate: (-5px, 6px);
+    transform: rotate(-45deg) translate(-5px, 6px);
 }
